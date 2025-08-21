@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Felregistrering</title>
+  <style>
+    body { font-family: Arial; background: #f0f2f5; padding: 20px; }
+    .button { padding: 12px; margin: 5px; background: #1e90ff; color: white; border: none; border-radius: 8px; width: 90%; }
+    .button-back { background: #888; }
+    textarea { width: 90%; height: 100px; margin: 10px 0; border-radius: 8px; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Välj huvudkategori</h2>
+  <div id="main-buttons"></div>
+  <div id="sub-buttons" style="display:none;"></div>
+  <div id="fritext-div" style="display:none;">
+    <textarea id="fritext" placeholder="Beskriv problemet..."></textarea>
+    <button class="button" onclick="submitText()">Spara</button>
+  </div>
+
+<script>
+const kategorier = {{ kategorier | tojson }};
+let valHuvud, valUnder;
+
+function showHuvudkategori(){
+    document.getElementById("main-buttons").style.display = "block";
+    document.getElementById("sub-buttons").style.display = "none";
+    document.getElementById("fritext-div").style.display = "none";
+    const main = document.getElementById("main-buttons");
+    main.innerHTML = "";
+    for (let k in kategorier){
+        let btn = document.createElement("button");
+        btn.innerText = k;
+        btn.className = "button";
+        btn.onclick = ()=> showUnderkategori(k);
+        main.appendChild(btn);
+    }
+}
+
+function showUnderkategori(k){
+    valHuvud = k;
+    document.getElementById("main-buttons").style.display = "none";
+    document.getElementById("sub-buttons").style.display = "block";
+    const sub = document.getElementById("sub-buttons");
+    sub.innerHTML = "<h3>"+k+"</h3>";
+    kategorier[k].forEach(u=>{
+        let btn = document.createElement("button");
+        btn.innerText = u;
+        btn.className = "button";
+        btn.onclick = ()=> showFritext(u);
+        sub.appendChild(btn);
+    });
+    let back = document.createElement("button");
+    back.innerText = "← Tillbaka";
+    back.className = "button button-back";
+    back.onclick = showHuvudkategori;
+    sub.appendChild(back);
+}
+
+function showFritext(u){
+    valUnder = u;
+    document.getElementById("sub-buttons").style.display = "none";
+    document.getElementById("fritext-div").style.display = "block";
+}
+
+function submitText(){
+    let text = document.getElementById("fritext").value;
+    fetch("/submit", {
+        method:"POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({huvudkategori: valHuvud, underkategori: valUnder, fritext: text})
+    }).then(res=>{
+        if(res.ok){ alert("Sparat!"); document.getElementById("fritext").value=""; showHuvudkategori(); }
+        else alert("Fel vid sparning!");
+    })
+}
+
+showHuvudkategori();
+</script>
+</body>
+</html>
