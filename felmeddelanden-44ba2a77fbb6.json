@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "felmeddelanden",
+  "private_key_id": "44ba2a77fbb63e2c32822dabc765b252b8c989b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDM/M34DJi2Ho4i\n6fhgEnJs9DMXY5VkLFJvXJ0Nq2/xwu16Jv+A8pqSsURLARXn4zxzqV9KaJcD7i0l\n6pPc5i+23YfPd8QesqU3/+A85r4yRKaqfGKeoJy86O/fA9KxZ+xRzgm0BjRPxsbr\nUd4gqj5KH1v/ACzkLXgDtivvMWPLppAFgMw4z34r6Bulmhr1fecl7mKTbDXM7EPd\nBlvblZFxMviQk+xxJE/MXZRaSTST0pJmtY6PacflT/Lw3kj+661VbA6BqvRk58Rz\ncJQ8ykLVegxGeKGFRc09xcBs/7vqhTqIH+nikQ3gT3XQhkrM96F1ZzSfGcE58yk9\nL4TKz0v/AgMBAAECggEAQDJiHO9w+gQ6tmN45jmQvV+DCq2k0SDyVi72fpv0rI3E\nCq/g79TKpOtAPI8j+aHYQk7GaYq01MXIPOookZNDWS0qxcY31PdUt+N6KgiHgz2t\nxpG63vvk6mK3EKxlVSr7PylcL5WL13okvPjALJG0fUkx6fv3kyRMRDlOrBPXMaUx\n5RVod35AwlPnQXOKxEqAqujVeso5U2g8gca5JkpLGeHAI3YZL55gXkCPibgz1yao\nRLcZoa8bXJJgmAf2VBE1Ul6Vh3K+VqbvfO3QfC8xlnCunbVJ8/iaoDar6imIP12p\n2BxXkiVIxaAaj2dgo1wwZd8WRupPfWL0wOdPFsoKwQKBgQD3nw2XSg4LIUc30YuH\nWZ8UtkC3rqLA2o897cNM9yMC+A+2vl+N49wBTlNCBeDaWm/XbF4hohjlS5O3iv/c\niDW9JDLnDbRAPfbpDrZxIZ2sXg8JLLGoaJmuXFIX44WL5wTTX1FXeXfYzl3O4YbW\nSehCWiGBc6LVPwG0I1ALlXV7PwKBgQDT7HLmiq03FusiQ2R+Udi8WqSQT/n7L0Yk\niWYuyqkVSmKJwYNLxwf76faEatl/5OaIUiCdgWKPBg2dmSNTYvc0PlIrdm4PPjSj\npCxHFylyivjfNheG/Ov/1oDMBKw63cp24/qpTgC+JGL9semiHbt88OIge3O/piv8\nGNSnQDm/QQKBgGCHdHjhuY/FLUopOcdNvKIKWjhAr9mWWfi+U0ARp2hk41tN41og\n1Yb8zaATQpBcaPUFnbxmwGXCjJckbJG/15MgJWfFA9t3TGWWArEfdaPYFuxwq+EG\nxcIe4zHE1C6xpEPyCHedNociC5e2eyXWMeCL2jvopDWVFkju6ylY3i9pAoGBAL1c\nyk62G5DeKbyz+1fkSoYDeIh67iREWajMHUIyVGNx1BrDj05myfuPU3d/AloFbvjg\nacRTmH20KvZnn+kixUEpbsLnT/DO5LpUODxNtftjsn3BF8TGuxof0XZ7tmnjRMZ3\nb8NYr9E3Mjz+fIUfjChYFbZwmTzmfucESQApo3ABAoGABjjoZeOFTdar8iLxro7t\nHcYlNHSiH1jIFKF3wfTwMN3wVe2oTuHUQ68r6oWiWE53vNvQjNMltoSqPGd+bVSP\nIOI1tJ7zXBEnx6oTznagGafl3BrdJ6tZ/Dx+KkCx8ls4/2jH4mQWiJM3XYOyeQ0S\ng4qva7cTwRCW7qg9YFePer8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "felmeddelanden@felmeddelanden.iam.gserviceaccount.com",
+  "client_id": "109709480622339334364",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/felmeddelanden%40felmeddelanden.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
