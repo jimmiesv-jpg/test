@@ -12,7 +12,7 @@ if getattr(sys, 'frozen', False):
 else:
     base_path = os.path.dirname(__file__)
 
-SERVICE_ACCOUNT_FILE = os.path.join(base_path, "felmeddelanden-bedc86615fa6.json")
+SERVICE_ACCOUNT_FILE = os.path.join(base_path, "felmeddelanden-44ba2a77fbb6.json")
 SHEET_ID = "1jER2ZWJSJMzEMBdk_ovJgq3bc7sbg_tEuv3KnY9STfI"
 
 scope = ["https://www.googleapis.com/auth/spreadsheets"]
@@ -53,3 +53,4 @@ def submit():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
