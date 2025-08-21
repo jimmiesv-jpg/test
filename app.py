@@ -3,6 +3,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
 import os, sys
+import json  # ÄNDRADE: behövs för att läsa json-innehållet direkt
 
 app = Flask(__name__)
 
@@ -16,7 +17,12 @@ SERVICE_ACCOUNT_FILE = os.path.join(base_path, "felmeddelanden-44ba2a77fbb6.json
 SHEET_ID = "1jER2ZWJSJMzEMBdk_ovJgq3bc7sbg_tEuv3KnY9STfI"
 
 scope = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scope)
+
+# ÄNDRADE: läser JSON-innehållet direkt istället för från fil
+with open(SERVICE_ACCOUNT_FILE) as f:  
+    credentials_info = json.load(f)  # ÄNDRADE
+creds = Credentials.from_service_account_info(credentials_info, scopes=scope)  # ÄNDRADE
+
 gc = gspread.authorize(creds)
 sheet = gc.open_by_key(SHEET_ID).sheet1
 
@@ -53,4 +59,3 @@ def submit():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-
